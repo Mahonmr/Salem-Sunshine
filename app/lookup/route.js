@@ -19,6 +19,7 @@ export default Ember.Route.extend({
     },
 
     submitAddress(params) {
+      console.log(params)
       var self = this;
 
       var url = 'https://maps.googleapis.com/maps/api/geocode/json?address=' +
