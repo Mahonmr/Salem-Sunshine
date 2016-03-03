@@ -15,10 +15,14 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+* `git clone https://github.com/JeffreyRuder/bill-tracker.git` this repository
 * change into the new directory
 * `npm install`
 * `bower install`
+* Acquire API keys for Google Geocode and [Open States](http://openstates.org)
+* Insert the following properties into the `ENV` variable in `bill-tracker/config/environment.js`:
+  * `OPENSTATES_API_KEY: 'your key here'`
+  * `GOOGLE_GEOCODE_API_KEY: 'your key here'`
 
 ## Running / Development
 
@@ -50,4 +54,3 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-

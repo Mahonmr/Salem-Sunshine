@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import ENV from 'bill-tracker/config/environment';
 
 export default Ember.Route.extend({
   actions: {
@@ -8,17 +9,17 @@ export default Ember.Route.extend({
 
     submitAddress(params) {
       var self = this;
-      
-      var url = 'https://maps.googleapis.com/maps/api/geocode/json?address=' +
-        params.street.trim().replace(" ", "+") + "," +
-        params.city.trim().replace(" ", "+") + ",OR" +
-        params.zip.trim().replace(" ", "+") + "&key=AIzaSyCsudB_1mjPTFM4A4o6pJaEBrnOPZPTUiY";
 
-      Ember.$.getJSON(url).then(function(response) {
-        return response.results[0].geometry.location;
-      }).then(function(location) {
-        self.transitionTo('lookup', location.lat, location.lng)
-      });
+      var url = 'https://maps.googleapis.com/maps/api/geocode/json?address=' +
+        params.address.trim().replace(/([^a-zA-Z0-9*])+/g, "+") + "&key=" + ENV.GOOGLE_GEOCODE_API_KEY;
+
+      Ember.$.getJSON(url)
+        .then(function(response) {
+          return response.results[0].geometry.location;
+        })
+        .then(function(location) {
+          self.transitionTo('lookup', location.lat, location.lng);
+        });
     }
   }
 });

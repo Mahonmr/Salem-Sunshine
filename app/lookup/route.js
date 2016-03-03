@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import ENV from 'bill-tracker/config/environment';
 
 export default Ember.Route.extend({
   model: function(params) {
@@ -6,11 +7,11 @@ export default Ember.Route.extend({
     var lng = params.lng;
 
     var url = 'http://openstates.org/api/v1//legislators/geo/?lat=' + lat +
-    '&long=' + lng + '&apikey=ad8985ad95754238a64c485cd36ae247';
+    '&long=' + lng + '&apikey=' + ENV.OPENSTATES_API_KEY;
 
     return Ember.$.getJSON(url).then(function(response) {
       return response;
-    })
+    });
   },
 
   actions: {
@@ -22,15 +23,15 @@ export default Ember.Route.extend({
       var self = this;
 
       var url = 'https://maps.googleapis.com/maps/api/geocode/json?address=' +
-        params.street.trim().replace(" ", "+") + "," +
-        params.city.trim().replace(" ", "+") + ",OR" +
-        params.zip.trim().replace(" ", "+") + "&key=AIzaSyCsudB_1mjPTFM4A4o6pJaEBrnOPZPTUiY";
+        params.address.trim().replace(/([^a-zA-Z0-9*])+/g, "+") + "&key=" + ENV.GOOGLE_GEOCODE_API_KEY;
 
-      Ember.$.getJSON(url).then(function(response) {
-        return response.results[0].geometry.location;
-      }).then(function(location) {
-        self.transitionTo('lookup', location.lat, location.lng)
-      });
+      Ember.$.getJSON(url)
+        .then(function(response) {
+          return response.results[0].geometry.location;
+        })
+        .then(function(location) {
+          self.transitionTo('lookup', location.lat, location.lng);
+        });
     }
   }
 });

@@ -5,13 +5,9 @@ export default Ember.Component.extend({
   actions: {
     submitAddress() {
       var params = {
-        street: this.get('street'),
-        city: this.get('city'),
-        zip: this.get('zip'),
+        address: this.get('address'),
       };
-      this.set('street', "")
-      this.set('city', ""),
-      this.set('zip', ""),
+      this.set('address', "");
       this.sendAction('submitAddress', params);
     }
   }

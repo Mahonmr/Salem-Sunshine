@@ -1,12 +1,6 @@
 <form {{action 'submitAddress' on='submit'}}>
   <div class="form-group">
-    {{input value=street placeholder="Street Address" class="form-control" required=true}}
-  </div>
-  <div class="form-group">
-    {{input value=city placeholder="City" class="form-control" required=true}}
-  </div>
-  <div class="form-group">
-    {{input value=zip placeholder="Zip Code" class="form-control" required=true}}
+    {{input value=address placeholder="Street Address, City, State, Zip Code" class="form-control" required=true}}
   </div>
   <button type="submit" class='btn btn-default'>Submit</button>
 </form>
