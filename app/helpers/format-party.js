@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export function formatParty(params) {
-  if (params[0].party === "Democrat") {
+  if (params[0].party === "Democrat" || params[0].party === "Democratic") {
     return "democrat";
   } else if (params[0].party === "Republican") {
     return "republican";

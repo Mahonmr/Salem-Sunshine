@@ -1,11 +1,13 @@
-$border-radius-base: 0;
-$border-radius-small: 0;
-$border-radius-large: 0;
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800);
 
 $brand-primary: rgb(27, 37, 74);
 $oregon-gold: rgb(243, 181, 47);
 $democrat-blue: #00AEF3;
 $republican-red: #DB1A21;
+
+$border-radius-base: 0;
+$border-radius-small: 0;
+$border-radius-large: 0;
 
 $navbar-default-bg: $brand-primary;
 $navbar-default-toggle-border-color: $brand-primary;
@@ -13,6 +15,8 @@ $navbar-default-link-color: $oregon-gold;
 $navbar-default-link-active-color: $oregon-gold;
 $navbar-default-toggle-icon-bar-bg: $oregon-gold;
 $navbar-default-toggle-hover-bg: transparent;
+
+$font-family-sans-serif: "Open Sans", Helvetica, Arial, sans-serif;
 
 @import 'bootstrap';
 

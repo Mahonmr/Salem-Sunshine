@@ -1,7 +1,7 @@
 <form class="navbar-form navbar-right" {{action 'executeSearch' on='submit'}}>
   <div class="form-group">
     {{input class="form-control" id="search" value=search placeholder="Search Bills" required=true}}
-    {{bootstrap-datepicker class="form-control" value=search_date placeholder="Since Date" endDate="today"}}
+    {{bootstrap-datepicker class="form-control" value=search_date placeholder="Action Since Date" endDate="today"}}
   </div>
   <button class="btn btn-default" type="submit">Submit</button>
 </form>

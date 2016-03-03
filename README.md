@@ -1,7 +1,18 @@
-# Bill-tracker
+# Salem Sunshine
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Salem Sunshine uses the [Open States](http://openstates.org) API to search information about the Oregon State Legislature. Other Oregon bill tracker websites do not allow searches by both date and keywords, only one or the other. This API allows for a superior search option.
+
+Salem Sunshine was created as an exercise in the use of APIs to retrieve JSON data in Ember.js apps.
+
+## Features
+
+* Look up state legislators by address
+* Look up bills by keyword search and date of last legislative action
+* View bill details and links to more information
+
+## Technologies Used
+
+Ember.js, JavaScript, SASS, Bootstrap.
 
 ## Prerequisites
 
@@ -15,8 +26,8 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone https://github.com/JeffreyRuder/bill-tracker.git` this repository
-* change into the new directory
+* `git clone https://github.com/JeffreyRuder/bill-tracker.git`
+* Change into the new directory
 * `npm install`
 * `bower install`
 * Acquire API keys for Google Geocode and [Open States](http://openstates.org)
@@ -29,10 +40,6 @@ You will need the following things properly installed on your computer.
 * `ember server`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
 ### Running Tests
 
 * `ember test`
@@ -42,10 +49,6 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 * `ember build` (development)
 * `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
 
 ## Further Reading / Useful Links
 
