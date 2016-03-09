@@ -26,7 +26,7 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone https://github.com/JeffreyRuder/bill-tracker.git`
+* `git clone https://github.com/JeffreyRuder/salem-sunshine.git`
 * Change into the new directory
 * `npm install`
 * `bower install`
