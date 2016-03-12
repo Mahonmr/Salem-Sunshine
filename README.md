@@ -4,6 +4,10 @@ Salem Sunshine uses the [Open States](http://openstates.org) API to search infor
 
 Salem Sunshine was created as an exercise in the use of APIs to retrieve JSON data in Ember.js apps.
 
+## Demo
+
+View a demo on [Heroku](http://salem-sunshine.herokuapp.com).
+
 ## Features
 
 * Look up state legislators by address
